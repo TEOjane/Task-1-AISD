@@ -74,27 +74,27 @@ void printArray(int n, double* numbers)
 {
     for (int i = 0; i < n; i++)
     {
-        cout << setprecision(3);
-        cout << fixed << numbers[i] << " ";
+        std::cout << std::setprecision(3);
+        std::cout << std::fixed << numbers[i] << " ";
        
     }
 
-    cout << endl;
+    std::cout << std::endl;
 }
 
 int main()
 {
     int n, opr;
-    cin >> n;
+    std::cin >> n;
 
     double* numbers{ new double[n] };
 
     for (int i = 0; i < n; i++)
     {
-        cin >> numbers[i];
+        std::cin >> numbers[i];
     }
 
-    cout << n << endl;
+    std::cout << n << std::endl;
     printArray(n, numbers);
 
     numbers = addTwoElements(n, numbers);
@@ -104,26 +104,26 @@ int main()
     numbers = multThrid(n, numbers);
     printArray(n, numbers);
 
-    cin >> opr;
+    std::cin >> opr;
 
     while (opr != 0)
     {
         if (opr == 1)
         {
             double newElement;
-            cin >> newElement;
+            std::cin >> newElement;
 
             numbers = addElement(n, numbers, newElement);
             n++;
 
-            cout << "+: " << n << endl;
+            std::cout << "+: " << n << std::endl;
             printArray(n, numbers);
         }
         else
         {
             numbers = deleteLastElement(n, numbers);
             n--;
-            cout << "-: " << n << endl;
+            std::cout << "-: " << n << std::endl;
             printArray(n, numbers);
         }
 
@@ -134,7 +134,7 @@ int main()
         numbers = multThrid(n, numbers);
         printArray(n, numbers);
 
-        cin >> opr;
+        std::cin >> opr;
     }
 
 }
