@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 #include <iomanip>
-using namespace std;
+
 
 double* addElement(int n, double* numbers, double newElement)
 {
