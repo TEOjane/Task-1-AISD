@@ -74,19 +74,9 @@ void printArray(int n, double* numbers)
 {
     for (int i = 0; i < n; i++)
     {
-
-        //double b = round(numbers[i] * 1000.0) / 1000.0;
-
-        //numbers[i] = ceil(numbers[i] * 1000) / 1000;
-        if (numbers[i] == 4319.0625)
-        {
-            cout << 4319.063 << " ";
-        }
-        else
-        {
-            cout << setprecision(3);
-            cout << fixed << numbers[i] << " ";
-        }
+        cout << setprecision(3);
+        cout << fixed << numbers[i] << " ";
+       
     }
 
     cout << endl;
